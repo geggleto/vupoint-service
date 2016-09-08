@@ -28,3 +28,7 @@ $app->container->singleton('payload', function ($c) use ($app) {
 $app->container->singleton('excel', function ($c) use ($app) {
     return new \PHPExcel();
 });
+
+$app->container->singleton('Vupoint\Controller\ExcelAction', function ($c) {
+   return new \Vupoint\Controller\ExcelAction(getenv("WEBURI"), __DIR__ . "/".getenv("FILEURI"));
+});

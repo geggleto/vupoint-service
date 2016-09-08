@@ -25,6 +25,22 @@ class ExcelAction implements ActionInterface
     /** @var  Response */
     protected $response;
 
+    /** @var string */
+    protected $webUri;
+
+    /** @var string */
+    protected $fileUri;
+
+    /**
+     * ExcelAction constructor.
+     * @param $webUri
+     * @param $fileUri
+     */
+    public function __construct($webUri, $fileUri)
+    {
+        $this->webUri = $webUri;
+        $this->fileUri = $fileUri;
+    }
 
     /**
      * @return \Slim\Slim
@@ -80,7 +96,7 @@ class ExcelAction implements ActionInterface
      */
     public function handle(... $args)
     {
-        $service = new ExcelService("/files", __DIR__."/../../public/services/files", $this->app->validator, $this->app->excel);
+        $service = new ExcelService($this->webUri, $this->fileUri, $this->app->validator, $this->app->excel);
         $payload = $service->handleRequest($this->request->post());
         print $payload;
     }
