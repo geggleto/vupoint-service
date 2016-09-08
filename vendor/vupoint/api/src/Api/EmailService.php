@@ -18,7 +18,7 @@ use Vupoint\Data\PayloadInterface;
  *
  * @package Vupoint\Service
  */
-class EmailService implements EmailServiceInterface
+class EmailService implements ServiceInterface
 {
     /** @var Payload  */
     protected $payload;
@@ -40,6 +40,10 @@ class EmailService implements EmailServiceInterface
         $this->payload = $payload;
         $this->validator = $validator;
         $this->mailer = $mailer;
+
+        $this->validator->rule('required', ['to', 'from', 'subject', 'body']);
+        $this->validator->rule('optional', ['cc', 'bcc']);
+        $this->validator->rule('array', ['to', 'cc', 'bcc']);
     }
 
     /**
@@ -47,9 +51,6 @@ class EmailService implements EmailServiceInterface
      * @return Payload
      */
     public function handleRequest(array $post = array()) {
-        $this->validator->rule('required', ['to', 'from', 'subject', 'body']);
-        $this->validator->rule('optional', ['cc', 'bcc']);
-        $this->validator->rule('array', ['to', 'cc', 'bcc']);
 
         if ($this->validator->validate()) {
             $message = \Swift_Message::newInstance();

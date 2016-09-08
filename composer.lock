@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0d0f02f900ca52071bd77d279f5fe035",
-    "content-hash": "a35eb85da7f75e0af8096dd136fb23bf",
+    "hash": "65178dda03e2dc625e94624198263982",
+    "content-hash": "20d03801e88152af0447363b15264972",
     "packages": [
         {
             "name": "akrabat/rka-slim-controller",
@@ -202,6 +202,63 @@
                 "stream"
             ],
             "time": "2014-10-12 19:18:40"
+        },
+        {
+            "name": "phpoffice/phpexcel",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPOffice/PHPExcel.git",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xml": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHPExcel": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Balliauw",
+                    "homepage": "http://blog.maartenballiauw.be"
+                },
+                {
+                    "name": "Mark Baker"
+                },
+                {
+                    "name": "Franck Lefevre",
+                    "homepage": "http://blog.rootslabs.net"
+                },
+                {
+                    "name": "Erik Tilt"
+                }
+            ],
+            "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+            "homepage": "http://phpexcel.codeplex.com",
+            "keywords": [
+                "OpenXML",
+                "excel",
+                "php",
+                "spreadsheet",
+                "xls",
+                "xlsx"
+            ],
+            "time": "2015-05-01 07:00:55"
         },
         {
             "name": "react/promise",
@@ -444,20 +501,21 @@
         },
         {
             "name": "vupoint/api",
-            "version": "0.0.2",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geggleto/vupoint-api.git",
-                "reference": "09394548a352408d10e5949953f9b3a888e0b6a8"
+                "reference": "acb821c9d9f10ad6dee768ccd9f8fbd1ac2ac0c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geggleto/vupoint-api/zipball/09394548a352408d10e5949953f9b3a888e0b6a8",
-                "reference": "09394548a352408d10e5949953f9b3a888e0b6a8",
+                "url": "https://api.github.com/repos/geggleto/vupoint-api/zipball/acb821c9d9f10ad6dee768ccd9f8fbd1ac2ac0c8",
+                "reference": "acb821c9d9f10ad6dee768ccd9f8fbd1ac2ac0c8",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "~5.0",
+                "phpoffice/phpexcel": "^1.8",
                 "swiftmailer/swiftmailer": "^5.4",
                 "vlucas/valitron": "^1.2",
                 "vupoint/data": "0.0.1"
@@ -480,7 +538,7 @@
                     "homepage": "https://glenneggleton.com"
                 }
             ],
-            "time": "2016-09-07 14:14:43"
+            "time": "2016-09-08 12:38:47"
         },
         {
             "name": "vupoint/data",

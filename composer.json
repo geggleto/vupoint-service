@@ -15,7 +15,7 @@
         "vlucas/valitron": "^1.2",
         "guzzlehttp/guzzle": "~5.0",
         "vupoint/data" : "0.0.1",
-        "vupoint/api" : "0.0.2",
+        "vupoint/api" : "0.0.4",
         "akrabat/rka-slim-controller": "^2.0"
     },
     "require-dev" : {

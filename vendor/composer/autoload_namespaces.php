@@ -9,5 +9,6 @@ return array(
     'Valitron' => array($vendorDir . '/vlucas/valitron/src'),
     'Slim' => array($vendorDir . '/slim/slim'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
+    'PHPExcel' => array($vendorDir . '/phpoffice/phpexcel/Classes'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
 );
